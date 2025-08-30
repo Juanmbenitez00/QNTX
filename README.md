@@ -22,4 +22,59 @@ El proyecto es factible utilizando ChatGPT (texto) y DALL·E (imagen). Los datos
 Limitaciones: los modelos de imagen no garantizan cifras exactas y los modelos de texto pueden alucinar.  
 Cómo resolverlo: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
 
+## 🎯 Objetivos
+- Automatizar la generación de reportes ejecutivos para PyMEs a partir de sus datos de ventas y marketing.  
+- Reducir el tiempo de análisis y presentación de información clave.  
+- Estandarizar la lectura de KPIs esenciales: Crecimiento, CAC, ROAS y Ticket Promedio.  
+- Complementar los reportes con visualizaciones conceptuales que refuercen la comunicación con directivos.  
+- Demostrar la viabilidad de integrar prompts en procesos de Business Intelligence de bajo costo.
+
+## 📊 KPIs del proyecto
+
+Los indicadores clave que se utilizan en este proyecto son:
+
+- **Crecimiento (%)**  
+  Mide el cambio porcentual de un período respecto al anterior.  
+  Ejemplo: si ayer ingresaste $100.000 y hoy $110.000 → crecimiento = +10%.  
+  Ayuda a detectar tendencias positivas o caídas rápidas.
+
+- **CAC (Costo de Adquisición de Clientes)**  
+  Fórmula: gasto en marketing ÷ clientes nuevos.  
+  Ejemplo: $10.000 ÷ 20 clientes = $500.  
+  Permite saber si atraer clientes resulta rentable.
+
+- **ROAS (Retorno sobre la Inversión en Publicidad)**  
+  Fórmula: ingresos ÷ gasto en marketing.  
+  Ejemplo: $25.000 ÷ $5.000 = 5.  
+  Indica cuántos pesos se recuperan por cada peso invertido en publicidad.
+
+- **Ticket Promedio**  
+  Fórmula: ingresos ÷ órdenes.  
+  Ejemplo: $50.000 ÷ 100 ventas = $500.  
+  Mide cuánto gasta en promedio un cliente por compra.
+
+  ## 🧭 Metodología
+
+El proyecto se lleva a cabo en cinco etapas principales:
+
+1. **Carga de datos**  
+   Se utiliza un dataset de ventas diarias (ejemplo: enero 2024).  
+
+2. **Cálculo de KPIs**  
+   A partir de los datos se calculan Crecimiento, CAC, ROAS y Ticket Promedio.  
+
+3. **Prompt Texto→Texto**  
+   Los KPIs se envían a un prompt estructurado que:  
+   - Resume resultados en un informe ejecutivo (~150 palabras).  
+   - Identifica tendencias y anomalías.  
+   - Propone 5 acciones concretas en formato lista.  
+
+4. **Prompt Texto→Imagen**  
+   Se generan visualizaciones conceptuales estilo dashboard corporativo para reforzar la comunicación de los resultados.  
+
+5. **Documentación en Notebook**  
+   Todo el flujo se implementa en un cuaderno Jupyter (`QNTX.ipynb`) con celdas claras: carga de datos, KPIs, prompts y salidas.
+
+
+
 
