@@ -18,8 +18,8 @@ QNTX – Reportes Inteligentes para PyMEs propone un conjunto de prompts diseña
 - **Texto→Imagen:** creación de visualizaciones estilo dashboard corporativo que refuercen el informe.  
 
 **Viabilidad:**  
-El proyecto es factible utilizando ChatGPT (texto) y DALL·E/Stable Diffusion (imagen). Los datos provendrán de un dataset de ejemplo (ventas diarias).  
+El proyecto es factible utilizando ChatGPT (texto) y DALL·E (imagen). Los datos provendrán de un dataset de ejemplo (ventas diarias).  
 Limitaciones: los modelos de imagen no garantizan cifras exactas y los modelos de texto pueden alucinar.  
-Mitigación: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
+Cómo resolverlo: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
 
 
