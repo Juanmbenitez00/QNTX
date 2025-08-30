@@ -1,17 +1,25 @@
 # QNTX – Reportes Inteligentes para PyMEs
 
 ## 📌 Introducción
-_(Problema, propuesta de solución y viabilidad)_
 
-## 🎯 Objetivos
-_(Metas concretas del proyecto)_
+Las PyMEs generan gran cantidad de datos de ventas, marketing y clientes, pero en muchos casos no logran transformarlos en información útil para la toma de decisiones.
 
-## 🧭 Metodología
-_(Cómo se va a implementar paso a paso)_
+**Problema:**  
+Los principales desafíos que enfrentan son:
+- Procesos manuales con altos márgenes de error.  
+- Informes poco ejecutivos.  
+- Falta de visualizaciones claras para detectar tendencias.  
 
-## 🛠️ Herramientas y técnicas de prompting
-_(Modelos, librerías y técnicas de Fast Prompting utilizadas)_
+Esto impacta directamente en la velocidad y calidad de la toma de decisiones estratégicas, generando pérdida de oportunidades comerciales.
 
-## 🧪 Implementación (POC)
-_(Descripción de lo que contiene el Notebook con la prueba de concepto)_
+**Propuesta:**  
+QNTX – Reportes Inteligentes para PyMEs propone un conjunto de prompts diseñados para automatizar el análisis de datos y la comunicación de resultados.  
+- **Texto→Texto:** generación de reportes ejecutivos con KPIs, tendencias y recomendaciones.  
+- **Texto→Imagen:** creación de visualizaciones estilo dashboard corporativo que refuercen el informe.  
+
+**Viabilidad:**  
+El proyecto es factible utilizando ChatGPT (texto) y DALL·E/Stable Diffusion (imagen). Los datos provendrán de un dataset de ejemplo (ventas diarias).  
+Limitaciones: los modelos de imagen no garantizan cifras exactas y los modelos de texto pueden alucinar.  
+Mitigación: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
+
 
