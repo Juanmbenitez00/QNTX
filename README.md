@@ -75,6 +75,17 @@ El proyecto se lleva a cabo en cinco etapas principales:
 5. **Documentación en Notebook**  
    Todo el flujo se implementa en un cuaderno Jupyter (`QNTX.ipynb`) con celdas claras: carga de datos, KPIs, prompts y salidas.
 
+## 🛠 Herramientas y técnicas de prompting
 
+**Herramientas utilizadas**
+- **Python y librería Pandas**: para la carga y manipulación de datos de ventas.  
+- **Google Colab**: entorno online que permite trabajar con notebooks sin instalación local.  
+- **OpenAI API (gpt-4o-mini)**: modelo económico para generar reportes ejecutivos en texto.  
+- **DALL·E / Stable Diffusion**: para crear visualizaciones conceptuales tipo dashboard.  
+
+**Técnicas de Fast Prompting aplicadas**
+- **Zero shot prompting:** cuando se pide al modelo un análisis directo de los datos de ventas sin dar ejemplos previos, confiando en su capacidad de generalización.  
+- **One shot prompting:** se incluye un ejemplo breve de salida esperada, como un informe en tres secciones: *Qué pasó / Por qué / Qué hacer*.  
+- **Few shot prompting:** se proporcionan varios ejemplos de KPIs calculados correctamente para reforzar la consistencia de resultados en nuevas ejecuciones.  
 
 
