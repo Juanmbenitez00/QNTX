@@ -88,4 +88,18 @@ El proyecto se lleva a cabo en cinco etapas principales:
 - **One shot prompting:** se incluye un ejemplo breve de salida esperada, como un informe en tres secciones: *Qué pasó / Por qué / Qué hacer*.  
 - **Few shot prompting:** se proporcionan varios ejemplos de KPIs calculados correctamente para reforzar la consistencia de resultados en nuevas ejecuciones.  
 
+## Optimización del uso de tokens
+
+Para mantener el costo bajo y las respuestas enfocadas, este proyecto aplica:
+
+- **Modelo económico:** se utiliza `gpt-4o-mini`.
+- **Entrada mínima:** en lugar de enviar todo el CSV, se mandan solo los **últimos 7 días de ventas** para que el modelo calcule los KPIs.  
+- **Salida acotada:** se limita a un informe ejecutivo de ~150 palabras (≈180 tokens), acompañado de una lista de 5 acciones y una tabla resumen de KPIs.  
+- **Parámetros de control:** `temperature=0.3–0.5` para respuestas consistentes y `max_output_tokens=300` como límite de longitud.  
+- **Estimación exacta con Tokenizer de OpenAI:**  
+  - El prompt principal ocupa **250 tokens de entrada**.  
+  - La salida prevista (~150 palabras) ocupa aprox **180 tokens**.  
+  - Total por consulta ≈ **430 tokens**.
+  
+
 
