@@ -1,6 +1,6 @@
 # QNTX – Reportes Inteligentes para PyMEs
 
-## 📌 Introducción
+## Introducción
 
 Las PyMEs generan gran cantidad de datos de ventas, marketing y clientes, pero en muchos casos no logran transformarlos en información útil para la toma de decisiones.
 
@@ -22,14 +22,14 @@ El proyecto es factible utilizando ChatGPT (texto) y DALL·E (imagen). Los datos
 Limitaciones: los modelos de imagen no garantizan cifras exactas y los modelos de texto pueden alucinar.  
 Cómo resolverlo: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
 
-## 🎯 Objetivos
+## Objetivos
 - Automatizar la generación de reportes ejecutivos para PyMEs a partir de sus datos de ventas y marketing.  
 - Reducir el tiempo de análisis y presentación de información clave.  
 - Estandarizar la lectura de KPIs esenciales: Crecimiento, CAC, ROAS y Ticket Promedio.  
 - Complementar los reportes con visualizaciones conceptuales que refuercen la comunicación con directivos.  
 - Demostrar la viabilidad de integrar prompts en procesos de Business Intelligence de bajo costo.
 
-## 📊 KPIs del proyecto
+## KPIs del proyecto
 
 Los indicadores clave que se utilizan en este proyecto son:
 
@@ -53,7 +53,7 @@ Los indicadores clave que se utilizan en este proyecto son:
   Ejemplo: $50.000 ÷ 100 ventas = $500.  
   Mide cuánto gasta en promedio un cliente por compra.
 
-  ## 🧭 Metodología
+  ## Metodología
 
 El proyecto se lleva a cabo en cinco etapas principales:
 
@@ -75,7 +75,7 @@ El proyecto se lleva a cabo en cinco etapas principales:
 5. **Documentación en Notebook**  
    Todo el flujo se implementa en un cuaderno Jupyter (`QNTX.ipynb`) con celdas claras: carga de datos, KPIs, prompts y salidas.
 
-## 🛠 Herramientas y técnicas de prompting
+## Herramientas y técnicas de prompting
 
 **Herramientas utilizadas**
 - **Python y librería Pandas**: para la carga y manipulación de datos de ventas.  
