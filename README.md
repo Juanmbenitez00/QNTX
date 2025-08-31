@@ -98,8 +98,8 @@ Para mantener el costo bajo y las respuestas enfocadas, este proyecto aplica:
 - **Parámetros de control:** `temperature=0.3–0.5` para respuestas consistentes y `max_output_tokens=300` como límite de longitud.  
 - **Estimación exacta con Tokenizer de OpenAI:**  
   - El prompt principal ocupa **250 tokens de entrada**.  
-  - La salida prevista (~150 palabras) ocupa aprox **180 tokens**.  
-  - Total por consulta ≈ **430 tokens**.
+  - La salida prevista (150 palabras) ocupa aprox **180 tokens**.  
+  - Total por consulta **430 tokens**.
   
 
 
