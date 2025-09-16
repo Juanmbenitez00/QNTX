@@ -1,7 +1,16 @@
 # QNTX – Reportes Inteligentes para PyMEs
 
-## Introducción
+## Resumen
+QNTX es un proyecto demostrativo que aplica **ingeniería de prompts** para generar reportes ejecutivos y visualizaciones conceptuales a partir de datos de ventas de PyMEs.  
+El flujo combina:
+- **Texto → Texto**: un prompt estructurado que produce un informe ejecutivo (~150 palabras), tendencias y 5 acciones concretas.  
+- **Texto → Imagen**: prompts diseñados para crear imágenes estilo dashboard corporativo con **DALL·E de ChatGPT Plus**.  
 
+El objetivo es mostrar cómo las PyMEs pueden acceder a reportes claros y visuales usando herramientas accesibles (Google Colab + ChatGPT Plus), sin depender de infraestructuras complejas.
+
+---
+
+## Introducción
 Las PyMEs generan gran cantidad de datos de ventas, marketing y clientes, pero en muchos casos no logran transformarlos en información útil para la toma de decisiones.
 
 **Problema:**  
@@ -15,12 +24,14 @@ Esto impacta directamente en la velocidad y calidad de la toma de decisiones est
 **Propuesta:**  
 QNTX – Reportes Inteligentes para PyMEs propone un conjunto de prompts diseñados para automatizar el análisis de datos y la comunicación de resultados.  
 - **Texto→Texto:** generación de reportes ejecutivos con KPIs, tendencias y recomendaciones.  
-- **Texto→Imagen:** creación de visualizaciones estilo dashboard corporativo que refuercen el informe.  
+- **Texto→Imagen:** creación de visualizaciones estilo dashboard corporativo con **DALL·E** para reforzar el informe.  
 
 **Viabilidad:**  
-El proyecto es factible utilizando ChatGPT (texto) y DALL·E (imagen). Los datos provendrán de un dataset de ejemplo (ventas diarias).  
-Limitaciones: los modelos de imagen no garantizan cifras exactas y los modelos de texto pueden alucinar.  
-Cómo resolverlo: prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
+El proyecto es factible utilizando ChatGPT Plus (texto e imágenes). Los datos provienen de un dataset de ejemplo (ventas diarias).  
+**Limitaciones:** las imágenes son conceptuales y los modelos de texto pueden alucinar.  
+**Cómo resolverlo:** prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
+
+---
 
 ## Objetivos
 - Automatizar la generación de reportes ejecutivos para PyMEs a partir de sus datos de ventas y marketing.  
@@ -29,77 +40,79 @@ Cómo resolverlo: prompts estructurados que obliguen a cálculos paso a paso y d
 - Complementar los reportes con visualizaciones conceptuales que refuercen la comunicación con directivos.  
 - Demostrar la viabilidad de integrar prompts en procesos de Business Intelligence de bajo costo.
 
+---
+
 ## KPIs del proyecto
+- **Crecimiento (%)**: mide el cambio porcentual de un período respecto al anterior.  
+- **CAC (Costo de Adquisición de Clientes)**: gasto en marketing ÷ clientes nuevos.  
+- **ROAS (Retorno sobre la inversión en publicidad)**: ingresos ÷ gasto en marketing.  
+- **Ticket Promedio**: ingresos ÷ órdenes.
 
-Los indicadores clave que se utilizan en este proyecto son:
+---
 
-- **Crecimiento (%)**  
-  Mide el cambio porcentual de un período respecto al anterior.  
-  Ejemplo: si ayer ingresaste $100.000 y hoy $110.000 → crecimiento = +10%.  
-  Ayuda a detectar tendencias positivas o caídas rápidas.
+## Metodología
+1. **Carga de datos**: dataset de ventas diarias (ejemplo: 60 días).  
+2. **Cálculo de KPIs**: Crecimiento, CAC, ROAS, Ticket Promedio.  
+3. **Prompt Texto→Texto**: generación de informe ejecutivo (~150 palabras) con KPIs y 5 acciones.  
+4. **Prompt Texto→Imagen**: generación de prompts para visualizaciones tipo dashboard con **DALL·E**.  
+5. **Documentación en Notebook**: todo el flujo en `notebooks/QNTX_Final.ipynb`.
 
-- **CAC (Costo de Adquisición de Clientes)**  
-  Fórmula: gasto en marketing ÷ clientes nuevos.  
-  Ejemplo: $10.000 ÷ 20 clientes = $500.  
-  Permite saber si atraer clientes resulta rentable.
-
-- **ROAS (Retorno sobre la Inversión en Publicidad)**  
-  Fórmula: ingresos ÷ gasto en marketing.  
-  Ejemplo: $25.000 ÷ $5.000 = 5.  
-  Indica cuántos pesos se recuperan por cada peso invertido en publicidad.
-
-- **Ticket Promedio**  
-  Fórmula: ingresos ÷ órdenes.  
-  Ejemplo: $50.000 ÷ 100 ventas = $500.  
-  Mide cuánto gasta en promedio un cliente por compra.
-
-  ## Metodología
-
-El proyecto se lleva a cabo en cinco etapas principales:
-
-1. **Carga de datos**  
-   Se utiliza un dataset de ventas diarias (ejemplo: enero 2024).  
-
-2. **Cálculo de KPIs**  
-   A partir de los datos se calculan Crecimiento, CAC, ROAS y Ticket Promedio.  
-
-3. **Prompt Texto→Texto**  
-   Los KPIs se envían a un prompt estructurado que:  
-   - Resume resultados en un informe ejecutivo (~150 palabras).  
-   - Identifica tendencias y anomalías.  
-   - Propone 5 acciones concretas en formato lista.  
-
-4. **Prompt Texto→Imagen**  
-   Se generan visualizaciones conceptuales estilo dashboard corporativo para reforzar la comunicación de los resultados.  
-
-5. **Documentación en Notebook**  
-   Todo el flujo se implementa en un cuaderno Jupyter (`QNTX.ipynb`) con celdas claras: carga de datos, KPIs, prompts y salidas.
+---
 
 ## Herramientas y técnicas de prompting
-
 **Herramientas utilizadas**
-- **Python y librería Pandas**: para la carga y manipulación de datos de ventas.  
-- **Google Colab**: entorno online que permite trabajar con notebooks sin instalación local.  
-- **OpenAI API (gpt-4o-mini)**: modelo económico para generar reportes ejecutivos en texto.  
-- **DALL·E / Stable Diffusion**: para crear visualizaciones conceptuales tipo dashboard.  
+- **Python + Pandas**: manipulación de datos.  
+- **Google Colab**: entorno de ejecución.  
+- **ChatGPT Plus (GPT-4o mini + DALL·E)**: para texto e imágenes.  
 
-**Técnicas de Fast Prompting aplicadas**
-- **Zero shot prompting:** cuando se pide al modelo un análisis directo de los datos de ventas sin dar ejemplos previos, confiando en su capacidad de generalización.  
-- **One shot prompting:** se incluye un ejemplo breve de salida esperada, como un informe en tres secciones: *Qué pasó / Por qué / Qué hacer*.  
-- **Few shot prompting:** se proporcionan varios ejemplos de KPIs calculados correctamente para reforzar la consistencia de resultados en nuevas ejecuciones.  
+**Técnicas aplicadas**
+- **Zero/One/Few-shot prompting** según el contexto.  
+- Instrucciones claras, formato fijo, delimitadores y longitud objetivo.  
+- Temperature baja (0.3–0.5) para consistencia.  
+
+---
 
 ## Optimización del uso de tokens
-
 Para mantener el costo bajo y las respuestas enfocadas, este proyecto aplica:
 
-- **Modelo económico:** se utiliza `gpt-4o-mini`.
-- **Entrada mínima:** en lugar de enviar todo el CSV, se mandan solo los **últimos 7 días de ventas** para que el modelo calcule los KPIs.  
-- **Salida acotada:** se limita a un informe ejecutivo de ~150 palabras (≈180 tokens), acompañado de una lista de 5 acciones y una tabla resumen de KPIs.  
-- **Parámetros de control:** `temperature=0.3–0.5` para respuestas consistentes y `max_output_tokens=300` como límite de longitud.  
-- **Estimación exacta con Tokenizer de OpenAI:**  
-  - El prompt principal ocupa **250 tokens de entrada**.  
-  - La salida prevista (150 palabras) ocupa aprox **180 tokens**.  
-  - Total por consulta **430 tokens**.
+- **Modelo económico:** se utiliza `gpt-4o-mini`.  
+- **Entrada mínima:** en lugar de enviar todo el CSV, se mandan solo los **últimos 7 días de ventas** para que el modelo genere el informe.  
+- **Salida acotada:** informe ejecutivo de ~150 palabras + 5 acciones + tabla de KPIs.  
+- **Parámetros de control:** `temperature=0.3–0.5`, `max_output_tokens=300`.  
+- **Estimación con tokenizer de OpenAI:**  
+  - Prompt: ~250 tokens.  
+  - Respuesta: ~180 tokens.  
+  - Total: ~430 tokens.  
+
+> En esta entrega se trabajó sin APIs externas, utilizando únicamente ChatGPT Plus.
+
+---
+
+## Implementación
+El notebook `notebooks/QNTX_Final.ipynb` incluye:
+1. Setup de entorno y datos.  
+2. Cálculo de KPIs y exportación a `outputs/kpis_resumen.csv`.  
+3. Prompt estructurado (texto→texto) y copia manual en ChatGPT Plus.  
+4. Prompts para imágenes (texto→imagen) ejecutados en **DALL·E**.  
+5. Exportación de resultados en `outputs/reporte_QNTX.md` y `outputs/imagen_dashboard_*.png`.
+
+---
+
+## Resultados
+- **`outputs/kpis_resumen.csv`**: tabla con KPIs calculados.  
+- **`outputs/reporte_QNTX.md`**: informe ejecutivo (~150 palabras) + 5 acciones + prompts de imagen.  
+- **`outputs/imagen_dashboard_1.png` y `outputs/imagen_dashboard_2.png`**: visualizaciones conceptuales tipo dashboard.  
+
+---
+
+## Conclusiones
+QNTX demuestra que la **Generación de prompts** aplicada a datos de PyMEs permite:
+- Reducir el tiempo de análisis.  
+- Generar reportes ejecutivos estandarizados.  
+- Apoyar decisiones con imágenes conceptuales que refuercen la comunicación.  
+
+La solución es accesible, replicable y puede escalarse a más indicadores y fuentes de datos en futuros desarrollos.
+
   
 
 
