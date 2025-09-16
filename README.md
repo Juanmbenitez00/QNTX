@@ -8,8 +8,6 @@ El flujo combina:
 
 El objetivo es mostrar cómo las PyMEs pueden acceder a reportes claros y visuales usando herramientas accesibles (Google Colab + ChatGPT Plus), sin depender de infraestructuras complejas.
 
----
-
 ## Introducción
 Las PyMEs generan gran cantidad de datos de ventas, marketing y clientes, pero en muchos casos no logran transformarlos en información útil para la toma de decisiones.
 
@@ -31,8 +29,6 @@ El proyecto es factible utilizando ChatGPT Plus (texto e imágenes). Los datos p
 **Limitaciones:** las imágenes son conceptuales y los modelos de texto pueden alucinar.  
 **Cómo resolverlo:** prompts estructurados que obliguen a cálculos paso a paso y definan el formato de salida.
 
----
-
 ## Objetivos
 - Automatizar la generación de reportes ejecutivos para PyMEs a partir de sus datos de ventas y marketing.  
 - Reducir el tiempo de análisis y presentación de información clave.  
@@ -40,15 +36,11 @@ El proyecto es factible utilizando ChatGPT Plus (texto e imágenes). Los datos p
 - Complementar los reportes con visualizaciones conceptuales que refuercen la comunicación con directivos.  
 - Demostrar la viabilidad de integrar prompts en procesos de Business Intelligence de bajo costo.
 
----
-
 ## KPIs del proyecto
 - **Crecimiento (%)**: mide el cambio porcentual de un período respecto al anterior.  
 - **CAC (Costo de Adquisición de Clientes)**: gasto en marketing ÷ clientes nuevos.  
 - **ROAS (Retorno sobre la inversión en publicidad)**: ingresos ÷ gasto en marketing.  
 - **Ticket Promedio**: ingresos ÷ órdenes.
-
----
 
 ## Metodología
 1. **Carga de datos**: dataset de ventas diarias (ejemplo: 60 días).  
@@ -56,8 +48,6 @@ El proyecto es factible utilizando ChatGPT Plus (texto e imágenes). Los datos p
 3. **Prompt Texto→Texto**: generación de informe ejecutivo (~150 palabras) con KPIs y 5 acciones.  
 4. **Prompt Texto→Imagen**: generación de prompts para visualizaciones tipo dashboard con **DALL·E**.  
 5. **Documentación en Notebook**: todo el flujo en `notebooks/QNTX_Final.ipynb`.
-
----
 
 ## Herramientas y técnicas de prompting
 **Herramientas utilizadas**
@@ -69,8 +59,6 @@ El proyecto es factible utilizando ChatGPT Plus (texto e imágenes). Los datos p
 - **Zero/One/Few-shot prompting** según el contexto.  
 - Instrucciones claras, formato fijo, delimitadores y longitud objetivo.  
 - Temperature baja (0.3–0.5) para consistencia.  
-
----
 
 ## Optimización del uso de tokens
 Para mantener el costo bajo y las respuestas enfocadas, este proyecto aplica:
@@ -86,8 +74,6 @@ Para mantener el costo bajo y las respuestas enfocadas, este proyecto aplica:
 
 > En esta entrega se trabajó sin APIs externas, utilizando únicamente ChatGPT Plus.
 
----
-
 ## Implementación
 El notebook `notebooks/QNTX_Final.ipynb` incluye:
 1. Setup de entorno y datos.  
@@ -96,14 +82,10 @@ El notebook `notebooks/QNTX_Final.ipynb` incluye:
 4. Prompts para imágenes (texto→imagen) ejecutados en **DALL·E**.  
 5. Exportación de resultados en `outputs/reporte_QNTX.md` y `outputs/imagen_dashboard_*.png`.
 
----
-
 ## Resultados
 - **`outputs/kpis_resumen.csv`**: tabla con KPIs calculados.  
 - **`outputs/reporte_QNTX.md`**: informe ejecutivo (~150 palabras) + 5 acciones + prompts de imagen.  
 - **`outputs/imagen_dashboard_1.png` y `outputs/imagen_dashboard_2.png`**: visualizaciones conceptuales tipo dashboard.  
-
----
 
 ## Conclusiones
 QNTX demuestra que la **Generación de prompts** aplicada a datos de PyMEs permite:
